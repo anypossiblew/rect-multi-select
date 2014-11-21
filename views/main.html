@@ -1,10 +1,14 @@
 <div class="container">
   <p>
-    Mouse move rectangular multi selection for angularjs
+    ui-rect-select.js is an angularjs plugin for the mouse move rectangular selection dom element.
   </p>
+  <p>
+    angular鼠标框选插件
+  </p>
+  <p><span class="glyphicon glyphicon-heart"></span> from the <a href="//anypossiblew.github.com">anypossiblew</a></p>
 
   <div class="alert alert-warning notice" role="alert">
-    <span ng-show="!selectable">Images from <a href="http://www.photoshows.cn">photoshows.cn</a></span>
+    <span ng-show="!selectable">Images from <a href="http://www.photoshows.cn">www.photoshows.cn</a></span>
     <span ng-show="selectable"><span>{{selectedPhotos.length}}</span> pictures selected</span>
   </div>
   <div class="header">
@@ -19,7 +23,7 @@
       </button>
 
       <button class="btn btn-default" >
-        按shift键叠加选择 shift + add selection
+        按shift键叠加选择 <b><i>shift</i></b> add selection
       </button>
     </p>
   </div>
@@ -96,9 +100,36 @@
  &lt;img ng-src="{{'{{baseUrl'+'}'+'}{{photo.name'+'}'+'}'}}&gt;
 &lt;/div&gt;</pre>
 
-  <h4>moveSelect</h4>
+  <h4>rect-move-select</h4>
   <p>Real time select elements on mouse move event, <b>moveSelect</b> is an boolean variable of <b>$scope</b>.</p>
-  <pre>rect-move-select="{{'{{moveSelect'+'}'+'}'}}"</pre>
+  <pre>&lt;div class="selectable-container"
+    rect-multi-select="{'selector': '.photo'}"
+    <b><i>rect-move-select="{{'{{moveSelect'+'}'+'}'}}"</i></b>
+    rect-selector="photo.actionSelected"&gt;
+&lt;/div&gt;</pre>
+
+  <h4>rect-selector</h4>
+  <p>The variable name of indicator for selected element in their scope</p>
+  <pre>&lt;div class="selectable-container"
+    rect-multi-select="{'selector': '.photo'}"
+    rect-move-select="{{'{{moveSelect'+'}'+'}'}}"
+    <b><i>rect-selector="photo.actionSelected"</i></b>&gt;
+&lt;/div&gt;</pre>
+
+  <h3>Example</h3>
+  <pre>&lt;div class="selectable-container"
+    rect-multi-select="{'selector': '.photo'}"
+    rect-move-select="{{'{{moveSelect'+'}'+'}'}}"
+    rect-selector="photo.actionSelected"&gt;
+    &lt;div class="photo-wall photo-selectable-container"&gt;
+      &lt;div ng-repeat="photo in photos"
+          ng-controller="PhotoCtrl"
+          class="photo"
+          ng-class="{'selected': photo.actionSelected}"&gt;
+        &lt;img ng-src="{{'{{baseUrl'+'}'+'}{{photo.name'+'}'+'}'}}&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
   <div class="footer">
     <p><span class="glyphicon glyphicon-heart"></span> from the <a href="//anypossiblew.github.com">anypossiblew</a></p>
   </div>

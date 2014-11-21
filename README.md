@@ -1,7 +1,7 @@
-rect-multi-select
+Sample for ui-rect-select.js
 =================
 
-Mouse move rectangular multi selection for angularjs
+Sample for mouse move rectangular selection for angularjs
 
 ##运行
 运行项目

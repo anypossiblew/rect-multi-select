@@ -1,0 +1,40 @@
+$body-bg-color: #ececec !default;
+$theme-edit-color: #4387fd;
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+// IE8 filter
+$opacity-ie: ($opacity * 100);
+filter: #{alpha(opacity=$opacity-ie)};
+}
+
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+  -ms-transform: scale($ratio); // IE9+
+  transform: scale($ratio);
+}
+
+// Animations
+@mixin animation($animation) {
+  -webkit-animation: $animation; /* Safari/Chrome */
+  animation: $animation; /* IE10+ and Future Browsers */
+}
+
+// Transitions
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+// Drop shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}

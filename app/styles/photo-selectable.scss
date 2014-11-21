@@ -1,0 +1,85 @@
+@import "include.scss";
+
+.photo-wall {
+  .photo {
+    position: relative;
+    display: inline-block;
+    margin: 1px;
+    background-color: grey;
+    width: 200px;
+    height: 200px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
+
+// photo selectable container
+.photo-selectable-container {
+  width: 100%;
+  .photo {
+    position: relative;
+    border: 0;
+    img {
+      @include transition(all 218ms ease-in-out);
+      @include box-sizing(border-box);
+      border: 0;
+    }
+
+    .action-select {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      z-index: 2;
+      @include opacity(0);
+    }
+
+    .action-container {
+      @include transition(all 218ms ease-in-out);
+    }
+
+    &:hover, &.hover {
+      .action {
+        @include opacity(1);
+      }
+    }
+
+    &.selectable {
+      img {
+        border: 5px solid $body-bg-color;
+      }
+      .action-select {
+        @include opacity(1);
+      }
+      .action-container {
+        border: 5px solid transparent;
+      }
+    }
+
+    &.selected {
+      img {
+        border: 5px solid $theme-edit-color;
+      }
+    }
+  }
+
+  .icon-photo-select {
+    @include opacity(.55);
+    background: no-repeat url(../images/photos-action.png) -42px -50px;
+    background-clip: content-box;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+  }
+  .icon-photo-select.icon-photo-selected {
+    @include animation(ttPhotosSelectionOverlayCheckmarkSelectedTransition .3s linear 0s 1);
+    @include opacity(1);
+    background: no-repeat url(../images/photos-action.png) -109px -50px;
+    background-clip: content-box;
+  }
+}

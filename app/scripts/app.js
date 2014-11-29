@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('rectMultiSelectApp', ['uiSelect']);
+  .module('uiRectSelectApp', ['uiSelect']);

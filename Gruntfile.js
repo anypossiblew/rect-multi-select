@@ -248,8 +248,8 @@ module.exports = function (grunt) {
     cssmin: {
        dist: {
          files: {
-           '<%= yeoman.dist %>/rect-multi-select.min.css': [
-             '<%= yeoman.app %>/styles/rect-multi-select.css'
+           '<%= yeoman.dist %>/ui-rect-select.min.css': [
+             '<%= yeoman.app %>/styles/ui-rect-select.css'
            ]
          }
        }
@@ -257,8 +257,8 @@ module.exports = function (grunt) {
     uglify: {
        dist: {
          files: {
-           '<%= yeoman.dist %>/rect-multi-select.min.js': [
-             '<%= yeoman.app %>/scripts/rect-multi-select.js'
+           '<%= yeoman.dist %>/ui-rect-select.min.js': [
+             '<%= yeoman.app %>/scripts/ui-rect-select.js'
            ]
          }
        }
@@ -336,7 +336,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/scripts/',
           dest: '<%= yeoman.dist %>',
           src: [
-            'rect-multi-select.js'
+            'ui-rect-select.js'
           ]
         }, {
           expand: true,
@@ -344,7 +344,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/styles/',
           dest: '<%= yeoman.dist %>',
           src: [
-            'rect-multi-select.css'
+            'ui-rect-select.css'
           ]
         }]
       },

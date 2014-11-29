@@ -4,7 +4,7 @@
 'use strict';
 
 angular.module('uiSelect', [])
-  .directive('rectMultiSelect',
+  .directive('uiRectSelect',
   ['$log', '$parse',
     function ($log, $parse) {
 
@@ -84,10 +84,10 @@ angular.module('uiSelect', [])
         link: function (scope, element, attrs) {
 
           var options;
-          var opt = scope.$eval(attrs.rectMultiSelect || "{}");
+          var opt = scope.$eval(attrs.uiRectSelect || "{}");
           options = angular.extend({}, defaults, opt);
 
-          attrs.$observe('rectMoveSelect', function(moveSelect) {
+          attrs.$observe('uiMoveSelect', function(moveSelect) {
             options.moveSelect = moveSelect&&(moveSelect=='true');
           });
 
@@ -194,7 +194,7 @@ angular.module('uiSelect', [])
             var minY = 5000;
             var totalElements = 0;
             var elementArr = new Array();
-            var setter = $parse(attrs.rectSelector || 'selected').assign;
+            var setter = $parse(attrs.uiSelector || 'selected').assign;
             angular.forEach(element.find(options.selector),
               function (bElem, key) {
 

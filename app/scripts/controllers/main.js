@@ -7,13 +7,8 @@
  * # MainCtrl
  * Controller of the rectMultiSelectApp
  */
-angular.module('rectMultiSelectApp')
+angular.module('uiRectSelectApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
     $scope.moveSelect = false;
 

@@ -4,7 +4,7 @@
   position: relative;
 }
 
-*[rect-multi-select] {
+*[ui-rect-select] {
   .ghost-select {
     position: absolute;
     z-index: 9000;
@@ -37,7 +37,6 @@
     @include box-shadow(black 0 0 10px);
     @include opacity(.4);
     background-color: #8bf;
-//    position: absolute;
   }
 
   #grid {
@@ -48,38 +47,3 @@
   }
 
 }
-
-@-webkit-keyframes ttPhotosSelectionOverlayCheckmarkSelectedTransition {
-  0% {
-    @include opacity(.3);
-    @include scale(.7);
-  }
-  50% {
-    @include opacity(1);
-    @include scale(1.1);
-  }
-  70% {
-    @include scale(.9);
-  }
-  to {
-    @include scale(1);
-  }
-}
-
-@keyframes ttPhotosSelectionOverlayCheckmarkSelectedTransition {
-  0% {
-    @include opacity(.3);
-    @include scale(.7);
-  }
-  50% {
-    @include opacity(1);
-    @include scale(1.1);
-  }
-  70% {
-    @include scale(.9);
-  }
-  to {
-    @include scale(1);
-  }
-}
-

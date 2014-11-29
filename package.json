@@ -1,6 +1,6 @@
 {
-  "name": "rectmultiselect",
-  "version": "0.1.0",
+  "name": "uirectselect",
+  "version": "0.1.3",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.1",

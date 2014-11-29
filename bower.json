@@ -1,7 +1,7 @@
 {
   "name": "ui-rect-select",
-  "version": "0.1.2",
-  "description": "Mouse move rectangular multi selection for angularjs",
+  "version": "0.1.3",
+  "description": "Angular selection rectangle utility that makes it easy to select multiple elements on a page with the mouse.",
   "authors": [
     "anypossiblew <anypossible.w@gmail.com>"
   ],
@@ -13,10 +13,10 @@
     "photo"
   ],
   "main": [
-    "dist/rect-multi-select.css",
-    "dist/rect-multi-select.min.css",
-    "dist/rect-multi-select.js",
-    "dist/rect-multi-select.min.js"
+    "dist/ui-rect-select.css",
+    "dist/ui-rect-select.min.css",
+    "dist/ui-rect-select.js",
+    "dist/ui-rect-select.min.js"
   ],
   "ignore": [
     "**/*.txt",

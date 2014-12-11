@@ -9,15 +9,8 @@
  */
 angular.module('rectMultiSelectApp')
   .controller('PhotoCtrl', ['$scope', '$log', function ($scope, $log) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
     $scope.select = function () {
-      //e && e.preventDefault();
-      //e && e.stopPropagation();
 
       var photo = $scope.photo;
       //photo.actionSelected = !photo.actionSelected;

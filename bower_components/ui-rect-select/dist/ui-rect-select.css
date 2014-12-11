@@ -1,27 +1,27 @@
 .selectable-container {
   position: relative; }
 
-*[rect-multi-select] .ghost-select {
+*[ui-rect-select] .ghost-select {
   position: absolute;
   z-index: 9000;
   cursor: default !important; }
-  *[rect-multi-select] .ghost-select.show {
+  *[ui-rect-select] .ghost-select.show {
     opacity: 1;
     filter: alpha(opacity=100); }
-*[rect-multi-select] #big-ghost {
+*[ui-rect-select] #big-ghost {
   background-color: rgba(239, 28, 190, 0.6);
   border: 1px solid #aaf81a;
   position: absolute;
   opacity: 0;
   filter: alpha(opacity=0); }
-  *[rect-multi-select] #big-ghost.show {
+  *[ui-rect-select] #big-ghost.show {
     opacity: 1;
     filter: alpha(opacity=100); }
-*[rect-multi-select] .ghost-select > div {
+*[ui-rect-select] .ghost-select > div {
   position: absolute;
   left: 0px !important;
   top: 2px !important; }
-*[rect-multi-select] .ghost-select > span {
+*[ui-rect-select] .ghost-select > span {
   width: 100%;
   height: 100%;
   float: left;
@@ -31,8 +31,10 @@
   opacity: 0.4;
   filter: alpha(opacity=40);
   background-color: #8bf; }
-*[rect-multi-select] #grid {
+*[ui-rect-select] #grid {
   width: 100%;
   height: 100%;
   top: 0;
   position: absolute; }
+
+/*# sourceMappingURL=ui-rect-select.css.map */

@@ -6,6 +6,7 @@
 
 /* Space out content a bit */
 body {
+  background-color: #90D1FF;
   padding-top: 20px;
   padding-bottom: 20px; }
 
@@ -106,12 +107,12 @@ body {
   transform-origin: 0 0;
   transform: rotate(45deg);
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(bottom, #534e41 3%, #9e9b96 5%, #64625a 7%, #5c5a55 93%, #9e9b96 95%, #534e41 97%);
-  background-image: -o-linear-gradient(bottom, #534e41 3%, #9e9b96 5%, #64625a 7%, #5c5a55 93%, #9e9b96 95%, #534e41 97%);
-  background-image: -moz-linear-gradient(bottom, #534e41 3%, #9e9b96 5%, #64625a 7%, #5c5a55 93%, #9e9b96 95%, #534e41 97%);
-  background-image: -webkit-linear-gradient(bottom, #534e41 3%, #9e9b96 5%, #64625a 7%, #5c5a55 93%, #9e9b96 95%, #534e41 97%);
-  background-image: -ms-linear-gradient(bottom, #534e41 3%, #9e9b96 5%, #64625a 7%, #5c5a55 93%, #9e9b96 95%, #534e41 97%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.03, #534e41), color-stop(0.05, #9e9b96), color-stop(0.07, #64625a), color-stop(0.93, #5c5a55), color-stop(0.95, #9e9b96), color-stop(0.97, #534e41)); }
+  background-image: linear-gradient(bottom, #534E41 3%, #9E9B96 5%, #64625A 7%, #5C5A55 93%, #9E9B96 95%, #534E41 97%);
+  background-image: -o-linear-gradient(bottom, #534E41 3%, #9E9B96 5%, #64625A 7%, #5C5A55 93%, #9E9B96 95%, #534E41 97%);
+  background-image: -moz-linear-gradient(bottom, #534E41 3%, #9E9B96 5%, #64625A 7%, #5C5A55 93%, #9E9B96 95%, #534E41 97%);
+  background-image: -webkit-linear-gradient(bottom, #534E41 3%, #9E9B96 5%, #64625A 7%, #5C5A55 93%, #9E9B96 95%, #534E41 97%);
+  background-image: -ms-linear-gradient(bottom, #534E41 3%, #9E9B96 5%, #64625A 7%, #5C5A55 93%, #9E9B96 95%, #534E41 97%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.03, #534E41), color-stop(0.05, #9E9B96), color-stop(0.07, #64625A), color-stop(0.93, #5C5A55), color-stop(0.95, #9E9B96), color-stop(0.97, #534E41)); }
 
 h1 {
   text-align: center;
@@ -188,3 +189,48 @@ h1 {
     filter: alpha(opacity=100);
     background: no-repeat url(../images/photos-action.png) -109px -50px;
     background-clip: content-box; }
+
+@-webkit-keyframes ttPhotosSelectionOverlayCheckmarkSelectedTransition {
+  0% {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); }
+  50% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  70% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); }
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@keyframes ttPhotosSelectionOverlayCheckmarkSelectedTransition {
+  0% {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); }
+  50% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  70% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); }
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+
+/*# sourceMappingURL=main.css.map */

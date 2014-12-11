@@ -30,9 +30,9 @@
 </div>
 
 <div class="jumbotron selectable-container"
-     rect-multi-select="{'selector': '.photo'}"
-     rect-move-select="{{moveSelect}}"
-     rect-selector="photo.actionSelected">
+     ui-rect-select="{'selector': '.photo'}"
+     ui-move-select="{{moveSelect}}"
+     ui-selector="photo.actionSelected">
 
   <div class="container">
 
@@ -71,56 +71,56 @@
     This will copy the ui-rect-select files into your components folder, along with its dependencies.
   </p>
   <p>Add the css:</p>
-  <pre>&lt;link rel="stylesheet" href="bower_components/ui-rect-select/dist/rect-multi-select.css"&gt;</pre>
+  <pre>&lt;link rel="stylesheet" href="bower_components/ui-rect-select/dist/ui-rect-select.css"&gt;</pre>
   <p>Load the script files in your application:</p>
   <pre>&lt;script src="bower_components/jquery/dist/jquery.js"&gt;&lt;/script&gt;
 &lt;script src="bower_components/angular/angular.js"&gt;&lt;/script&gt;
-&lt;script src="bower_components/ui-rect-select/dist/rect-multi-select.js"&gt;&lt;/script&gt;</pre>
+&lt;script src="bower_components/ui-rect-select/dist/ui-rect-select.js"&gt;&lt;/script&gt;</pre>
 
   <p>
     Add the uiSelect module as a dependency to your application module:
   </p>
   <pre>var myAppModule = angular.module('MyApp', ['uiSelect'])</pre>
 
-  <p>Add the css <b >selectable-container</b> and apply the directive <b>rect-multi-select</b> to your form
+  <p>Add the css <b >selectable-container</b> and apply the directive <b>ui-rect-select</b> to your form
     elements:</p>
   <pre>&lt;div class="<b><i>selectable-container</i></b>"
-    <b><i>rect-multi-select</i></b>="{'selector': '.photo'}"
-    rect-move-select="{{'{{moveSelect'+'}'+'}'}}"
-    rect-selector="photo.actionSelected"&gt;
+    <b><i>ui-rect-select</i></b>="{'selector': '.photo'}"
+    ui-move-select="{{'{{moveSelect'+'}'+'}'}}"
+    ui-selector="photo.actionSelected"&gt;
 &lt;/div&gt;</pre>
 
   <h3>Options</h3>
   <h4>selector</h4>
   <p>To be selected element's css selector</p>
-  <pre>rect-multi-select="<b><i>{'selector': '.photo'}</i></b>"</pre>
+  <pre>ui-rect-select="<b><i>{'selector': '.photo'}</i></b>"</pre>
   <pre>&lt;div ng-repeat="photo in photos"
     ng-controller="PhotoCtrl"
     <b><i>class="photo"&gt;</i></b>
  &lt;img ng-src="{{'{{baseUrl'+'}'+'}{{photo.name'+'}'+'}'}}&gt;
 &lt;/div&gt;</pre>
 
-  <h4>rect-move-select</h4>
+  <h4>ui-move-select</h4>
   <p>Real time select elements on mouse move event, <b>moveSelect</b> is an boolean variable of <b>$scope</b>.</p>
   <pre>&lt;div class="selectable-container"
-    rect-multi-select="{'selector': '.photo'}"
-    <b><i>rect-move-select="{{'{{moveSelect'+'}'+'}'}}"</i></b>
-    rect-selector="photo.actionSelected"&gt;
+    ui-rect-select="{'selector': '.photo'}"
+    <b><i>ui-move-select="{{'{{moveSelect'+'}'+'}'}}"</i></b>
+    ui-selector="photo.actionSelected"&gt;
 &lt;/div&gt;</pre>
 
-  <h4>rect-selector</h4>
+  <h4>ui-selector</h4>
   <p>The variable name of indicator for selected element in their scope</p>
   <pre>&lt;div class="selectable-container"
-    rect-multi-select="{'selector': '.photo'}"
-    rect-move-select="{{'{{moveSelect'+'}'+'}'}}"
-    <b><i>rect-selector="photo.actionSelected"</i></b>&gt;
+    ui-rect-select="{'selector': '.photo'}"
+    ui-move-select="{{'{{moveSelect'+'}'+'}'}}"
+    <b><i>ui-selector="photo.actionSelected"</i></b>&gt;
 &lt;/div&gt;</pre>
 
   <h3>Example</h3>
   <pre>&lt;div class="selectable-container"
-    rect-multi-select="{'selector': '.photo'}"
-    rect-move-select="{{'{{moveSelect'+'}'+'}'}}"
-    rect-selector="photo.actionSelected"&gt;
+    ui-rect-select="{'selector': '.photo'}"
+    ui-move-select="{{'{{moveSelect'+'}'+'}'}}"
+    ui-selector="photo.actionSelected"&gt;
     &lt;div class="photo-wall photo-selectable-container"&gt;
       &lt;div ng-repeat="photo in photos"
           ng-controller="PhotoCtrl"

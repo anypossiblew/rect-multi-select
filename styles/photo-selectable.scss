@@ -83,3 +83,37 @@
     background-clip: content-box;
   }
 }
+
+@-webkit-keyframes ttPhotosSelectionOverlayCheckmarkSelectedTransition {
+  0% {
+    @include opacity(.3);
+    @include scale(.7);
+  }
+  50% {
+    @include opacity(1);
+    @include scale(1.1);
+  }
+  70% {
+    @include scale(.9);
+  }
+  to {
+    @include scale(1);
+  }
+}
+
+@keyframes ttPhotosSelectionOverlayCheckmarkSelectedTransition {
+  0% {
+    @include opacity(.3);
+    @include scale(.7);
+  }
+  50% {
+    @include opacity(1);
+    @include scale(1.1);
+  }
+  70% {
+    @include scale(.9);
+  }
+  to {
+    @include scale(1);
+  }
+}
